@@ -138,12 +138,11 @@ class ElasticSearch
 	/**
 	 * delete the document
 	 *
-	 * @param string $type
 	 * @param string $id
 	 *
 	 * @return array
 	 */
-	public function delete(string $type, string $id)
+	public function delete(string $id)
 	{
 		return $this->_call('_doc/' . $id, 'DELETE');
 	}
