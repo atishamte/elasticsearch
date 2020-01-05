@@ -37,33 +37,33 @@ $e->set_index($index);
 
 // Without method chaining
 $e->set_index($index);
-$d = $e->check_index();
+$e->check_index();
 
 // With method chaning
-$d = $e->set_index($index)->check_index();
-$d = $e->check_index();
+$e->set_index($index)->check_index();
+$e->check_index();
 --------------------------------------------------------
 // Check status of Index
-$d = $e->status();
+$e->status();
 --------------------------------------------------------
 // Add document in index
-$d = $e->add('person', ['name' => 'Robart']);
+$e->add('person', ['name' => 'Robart']);
 --------------------------------------------------------
 // Get document from index
-$d = $e->get('person');
+$e->get('person');
 --------------------------------------------------------
 // Update document in index
-$d = $e->update('person', ['doc' => ['name' => 'Robart Downy Jr']]);
+$e->update('person', ['doc' => ['name' => 'Robart Downy Jr']]);
 --------------------------------------------------------
 // Query document from index
-$d = $e->query(['match' => ['name' => 'Robart Downy Jr']]);
+$e->query(['match' => ['name' => 'Robart Downy Jr']]);
 --------------------------------------------------------
 // Count all documents in index
-$d = $e->count_all();
+$e->count_all();
 --------------------------------------------------------
 // Delete document from index
-$d = $e->delete('person');
+$e->delete('person');
 --------------------------------------------------------
 // Delete Index
-$d = $e->delete_index();
+$e->delete_index();
 ```
