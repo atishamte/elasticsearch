@@ -23,15 +23,12 @@ $index = 'dummydata';
 
 // New elasticsearch object 
 $e = new ElasticSearch($server);
-
-// Setting a index to object
+--------------------------------------------------------
+// Set Index
 $e->set_index($index);
 --------------------------------------------------------
 // Create Index
 $e->create_index($index);
---------------------------------------------------------
-// Set Index
-$e->set_index($index);
 --------------------------------------------------------
 // Check Index
 
@@ -41,7 +38,6 @@ $e->check_index();
 
 // With method chaning
 $e->set_index($index)->check_index();
-$e->check_index();
 --------------------------------------------------------
 // Check status of Index
 $e->status();
